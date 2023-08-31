@@ -3,4 +3,6 @@
 
 A simple react project has been conducted so as to exercise json server, axios, from child to parent props transition and other react attributes.
 
+![Project preview is here:](./myCourses.gif)
+
 
