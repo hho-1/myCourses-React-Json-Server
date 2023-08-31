@@ -18,6 +18,11 @@ function App() {
   const [courses, setCourses] = useState([])
   const [loading, setLoading] = useState(true)
 
+  const deleteCourse = (id) => {
+    const afterDeleteCourses = courses.filter((item) => item.id !== id)
+    setCourses(afterDeleteCourses)
+  }
+
   const fetchCourses = async () => {
 
     setLoading(true)
@@ -40,7 +45,23 @@ function App() {
   return (
     <div className="App">
       {
-        loading ? (<Loading/>) : (<Courses courses = {courses}/>)
+        loading ? 
+        (
+        <Loading/>
+        ) 
+        : 
+        (
+          <>
+          {courses.length === 0 ? (
+            <div>
+              <h2 style={{color:"red", fontSize:"2rem", margin:"50px auto"}}>No courses remained!!!</h2>
+              <button className='reLoadButton' onClick={()=>fetchCourses()}>Reload</button>
+            </div>
+          ) : (
+            <Courses courses = {courses} removeCourse= {deleteCourse}/>
+          )}
+        </>
+        )
       }
        
     </div>

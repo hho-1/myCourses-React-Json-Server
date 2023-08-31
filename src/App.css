@@ -1,0 +1,57 @@
+body{
+    text-align: center;
+    background-color: beige;
+}
+.courseMainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+h1{
+    margin: 40px auto;
+    border-bottom: 8px dotted green;
+}
+.card{
+    width: 350px;
+    border: 2px solid teal;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: bisque;
+}
+.cardPrice{
+    color: red;
+    font-size: 1.4rem;
+}
+.cardDeleteButton{
+    width: 100px;
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.totalPrice{
+    color: red;
+    font-size: 1.8rem;
+}
+.reLoadButton{
+    width: 150px;
+    padding: 15px;
+    background-color: rgb(189, 38, 12);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5rem;
+}
+.reLoadButton:hover{
+    cursor: pointer;
+}
